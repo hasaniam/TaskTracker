@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+      <style>
+      header {
+        padding: 20px;
+        width: 100%;
+        border-bottom: 2px solid black;
+      }
+    </style>
+</head>
+<body>
+    <header>
+        <h2> This is nav bar</h2>
+     </header>
+        {% block content %}
+
+      {% endblock %}
+</body>
+</html>
