@@ -3,6 +3,19 @@
 
 {% block title %}home{% endblock %}
 
- {% block content %}
+{% block content %}
 <h1>This is the home page</h1>
+
+<form action="" method="post">
+   {% csrf_token %}
+  <input type="text" name="task">
+  <input type="submit" value="add">
+</form>
+
+<ul>
+    {% for task in tasks %}
+    <li>{{ task }}</li>
+    {% endfor %}
+</ul>
+
 {% endblock %}
